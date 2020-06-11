@@ -93,6 +93,11 @@ li {
   background: #73d462;
 }
 
+.main-footer {
+  color: #fff;
+  background: #1b3c59;
+}
+
 .jumbotron {
   display: flex;
   flex-direction: row;

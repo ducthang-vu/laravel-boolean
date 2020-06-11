@@ -11,13 +11,13 @@
 <body>
     <header class="main-header">
         <div class="container-big">
-            <a class="main-header__logo" "href="">
+            <a class="main-header__logo" href="{{ route('home') }}">
                 <img src="https://www.boolean.careers/images/common/logo.png" alt="">    
             </a>    
 
             <nav class="main-header__navbar">
                 <ul>
-                    <li @if (Request::route()->getName() == 'static-pages.home') class="active" @endif ><a href="{{ route('static-pages.home') }}">Home</a></li>
+                    <li @if (Request::route()->getName() == 'home') class="active" @endif ><a href="{{ route('home') }}">Home</a></li>
                     <li><a href="">Corso</a></li>
                     <li @if (Request::route()->getName() == 'students') class="active" @endif ><a href="{{ route('students') }}">Dopo il corso</a></li>
                     <li><a href="">Lezione gratuita</a></li>
@@ -33,15 +33,15 @@
     </main>
 
 
-    <footer>
+    <footer class="main-footer">
         <div class="container">
             <div class="footer__head">
                 <div class="column"></div>
                 <div class="column">
                     <ul>
                         <li><a href="">Lezione gratuita</a></li>
-                        <li><a href="">Domande frequenti</a></li>
-                        <li><a href="">Privacy policy</a></li>
+                        <li><a href=" {{ route('faq')}}">Domande frequenti</a></li>
+                        <li><a href="{{ route('privacy') }}">Privacy policy</a></li>
                         <li><a href="">Lavora con noi</a></li>
                     </ul>
                 </div>
