@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Boolean</title>
-    <link rel="stylesheet" href="{{}}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="">
+    <header class="main-header">
+        <div class="container-big">
+            <a class="main-header__logo" "href="">
                 <img src="https://www.boolean.careers/images/common/logo.png" alt="">    
             </a>    
 
-            <nav>
+            <nav class="main-header__navbar">
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">Corso</a></li>
@@ -27,8 +27,10 @@
         </div>    
     </header>  
     
-    <main>
-        @yield('main-content')
+    <main class="main-content">
+        <div class="container">
+            @yield('main-content')
+        </div>
     </main>
 
 

@@ -1,0 +1,12 @@
+.jumbotron {
+    @include flex();
+    padding: 80px 0 100px;
+
+    .column {
+        flex-basis: 50%;
+
+        img {
+            width: 500px;
+        }
+    }
+}  

@@ -1,0 +1,17 @@
+.main-header {
+    .container-big {
+        @include flex($justify: space-between);
+
+        .main-header__logo {
+            img {
+                width: 200px;
+            }
+        }
+
+        .main-header__navbar {
+            li {
+                display: inline-block;
+            }
+        }
+    }
+}
