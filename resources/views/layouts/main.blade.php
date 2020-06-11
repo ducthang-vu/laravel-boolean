@@ -17,12 +17,12 @@
 
             <nav class="main-header__navbar">
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li @if (Request::route()->getName() == 'static-pages.home') class="active" @endif ><a href="{{ route('static-pages.home') }}">Home</a></li>
                     <li><a href="">Corso</a></li>
-                    <li><a href="">Dopo il corso</a></li>
+                    <li @if (Request::route()->getName() == 'students') class="active" @endif ><a href="{{ route('students') }}">Dopo il corso</a></li>
                     <li><a href="">Lezione gratuita</a></li>
                     <li><a href="">Assumi i nostri studenti</a></li>
-                    <li><a href="">Candidati ora</a></li>
+                    <li class="btn"><a href="">Candidati ora</a></li>
                 </ul>
             </nav>
         </div>    

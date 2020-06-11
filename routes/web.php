@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'StaticPagesController@index');
+Route::get('/', 'StaticPagesController@index')->name('static-pages.home');
 Route::get('/privacy', 'StaticPagesController@privacy');
 Route::get('/faq', 'StaticPagesController@faq');
 
-Route::get('/students', 'StudentsController@index');
+Route::get('/students', 'StudentsController@index')->name('students');
 Route::get('/students/show/{id}', 'StudentsController@show')->name('students.show');
