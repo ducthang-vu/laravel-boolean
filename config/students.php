@@ -53,7 +53,7 @@ return [
     ],
     [
         'id' => 5,
-        'img' => 'https://www.boolean.careers/images/students/artidormi.png',
+        'img' => 'https://www.boolean.careers/images/students/antidormi.png',
         'name' => 'Nicholas Antidormi',
         'age' => 20,
         'gender' => 'm',

@@ -32,6 +32,14 @@ li {
   max-width: 90%;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.in-block {
+  display: inline-block;
+}
+
 .main-header .container-big {
   display: flex;
   flex-direction: row;
@@ -63,5 +71,47 @@ li {
 
 .jumbotron .column img {
   width: 500px;
+}
+
+.card {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.card .card__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: 1rem;
+}
+
+.card .card__header img {
+  margin-right: 1rem;
+  width: 100px;
+}
+
+.show__main {
+  background: #e8ebf1;
+}
+
+.show__main .card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.show__main .card-container h2 {
+  margin-bottom: 2rem;
+}
+
+.show__main .card-container a {
+  flex-basis: 48%;
 }
 

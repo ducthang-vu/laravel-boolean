@@ -1,0 +1,17 @@
+.show__main {
+    background: $lightGray;
+
+    .card-container {
+        @include flex($justify: space-between, $wrap: wrap);
+        width: 100%;
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+
+        a {
+            flex-basis: 48%;
+        }
+    }
+}
+
