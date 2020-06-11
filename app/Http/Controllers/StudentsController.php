@@ -32,6 +32,6 @@ class StudentsController extends Controller
         } catch (Exception $e) {
             abort('404');
         }
-        return view('students.show');
+        return view('students.show', compact('student'));
     }
 }
