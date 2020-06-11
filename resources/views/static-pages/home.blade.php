@@ -3,10 +3,10 @@
 @section('main-content')
     <div class="container">
         <div class="jumbotron">
-            <div class="column">
-                <h1>Diventa sviluppatore web</h1>
-                <p>Trasformiamo la tua passione in una carriera. Se non trovi lavoro, ti rimborsiamo.</p>
-                <ul>
+            <div class="column left">
+                <h1 class="jumbotron__title">Diventa <strong>sviluppatore web</strong></h1>
+                <p class="jumbotron__p"><strong>Trasformiamo la tua passione in una carriera. Se non trovi lavoro, ti rimborsiamo.</strong></p>
+                <ul class="jumbotron__ul">
                     <li>6 mesi di corso intensivo online in diretta</li>
                     <li>Nessuna competenza di programmazione richiesta</li>
                     <li>Siamo certi del tuo successo, altrimenti ti rimborsiamo</li>

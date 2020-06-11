@@ -1,9 +1,32 @@
 .jumbotron {
-    @include flex();
+    @include flex($align: center);
     padding: 80px 0 100px;
+    font-size: 20px;
 
     .column {
         flex-basis: 50%;
+
+        .jumbotron__title {
+            font-weight: 300;
+            font-size: 58px;
+            text-transform: uppercase;
+        }
+
+        .jumbotron__p {
+            margin: 2rem 0;
+        }
+
+        .jumbotron__ul {
+            padding-left: 15px;
+
+            li {
+                list-style: disc;
+            }
+        }
+
+        &.left {
+            padding-right: 4rem;
+        }
 
         img {
             width: 500px;
