@@ -116,10 +116,11 @@ li {
 }
 
 .card {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding: 1rem;
   background: #fff;
   border-radius: 10px;
+  height: 223px;
 }
 
 .card .card__header {
@@ -136,11 +137,15 @@ li {
   width: 100px;
 }
 
-.show__main {
+.students__main {
   background: #e8ebf1;
 }
 
-.show__main .card-container {
+.students__main h2 {
+  padding: 2rem;
+}
+
+.students__main .card-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -149,11 +154,19 @@ li {
   width: 100%;
 }
 
-.show__main .card-container h2 {
+.students__main .card-container h2 {
   margin-bottom: 2rem;
 }
 
-.show__main .card-container a {
+.students__main .card-container a {
   flex-basis: 48%;
+}
+
+.students__main .card-container .card {
+  transition: transform 0.3s;
+}
+
+.students__main .card-container .card:hover {
+  transform: translateY(-5px);
 }
 

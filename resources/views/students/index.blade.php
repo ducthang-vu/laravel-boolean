@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('main-content')
-    <section class="show__main">
+    <section class="students__main">
         <div class="container">
             <h2 class="text-center">I nostri ex studenti</h2>
 

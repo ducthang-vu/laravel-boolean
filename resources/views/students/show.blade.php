@@ -14,7 +14,7 @@
                 </header>
         
                 <p class="card__text">
-                    {{ $student['description']  }}r
+                    {{ $student['description']  }}
                 </p>
             </div>
         </div>

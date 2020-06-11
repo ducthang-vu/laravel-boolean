@@ -1,8 +1,9 @@
 .card {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     padding: 1rem;
     background: #fff;
     border-radius: 10px;
+    height: 223px;
 
     .card__header{
         @include flex();

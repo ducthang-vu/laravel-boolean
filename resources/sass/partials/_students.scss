@@ -1,0 +1,29 @@
+.students__main {
+    background: $lightGray;
+
+    h2 {
+        padding: 2rem;
+    }
+
+    .card-container {
+        @include flex($justify: space-between, $wrap: wrap);
+        width: 100%;
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+
+        a {
+            flex-basis: 48%;
+        }
+
+        .card {
+            transition: transform .3s;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }
+}
+
