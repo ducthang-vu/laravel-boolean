@@ -159,9 +159,18 @@ li {
   margin-bottom: 1rem;
 }
 
+.card .card__header h3 {
+  margin-bottom: 1rem;
+}
+
+.card .card__header p {
+  padding-right: 2rem;
+}
+
 .card .card__header img {
   margin-right: 1rem;
   width: 100px;
+  border-radius: 10px;
 }
 
 .students__main {
@@ -195,5 +204,15 @@ li {
 
 .students__main .card-container .card:hover {
   transform: translateY(-5px);
+}
+
+.show-box {
+  padding: 50px;
+}
+
+.show-box .card {
+  margin: 0 auto;
+  width: 550px;
+  background: #e8ebf1;
 }
 
