@@ -8,6 +8,7 @@ $(document).ready(function() {
     // init handeblar
     var source = $('#student-template').html()
     var template = Handlebars.compile(source)
+    Handlebars.registerHelper('isMale', value => value == 'm')
 
     $('#filter').on('change', function() {
         $.ajax({
@@ -19,13 +20,7 @@ $(document).ready(function() {
         }).done(function(res) {
             if (res.response.length) {
                 $('.card-container').empty()
-                res.response.forEach(element => {
-                    let context = {
-                        ...element,
-                        declination: element.gender == 'm' ? 'o' : 'a',
-                    }
-                    $('.card-container').append(template(context))
-                });
+                $('.card-container').html(template({students: res.response}))
             } else {
                 console.log(res.error)
             }
