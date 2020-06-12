@@ -1,6 +1,6 @@
 <script id="student-template" type="text/x-handlebars-template">
     @{{#each students}}
-        <a href="{{ url('students/show') }}@{{ id }}">
+        <a href="{{ url('students/show') }}/@{{ slug }}">
             <div class="card">
                 <header class="card__header">
                     <img src="@{{ img  }}" alt="pic">
