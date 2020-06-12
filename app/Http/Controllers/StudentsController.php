@@ -8,30 +8,33 @@ use Illuminate\Http\Request;
 class StudentsController extends Controller
 {
     private $students;
+    private $genders;
 
     public function __construct() {
-        $this->students = config('students');
+        $this->students = config('students.students');
+        $this->genders = config('students.genders');
     }
 
-    private function searchStudentbyId($id) {
+    private function searchStudentbySlug($slug) {
         foreach($this->students as $student) {
-            if ($student['id'] == $id) {
+            if ($student['slug'] == $slug) {
                 return $student;
             }
         }
-        throw new Exception('No student found with id: ' - $id . '.');
+        throw new Exception('No student found with id: ' - $slug . '.');
     }
 
     public function index() {
-        return view('students.index', ['students' => $this->students]);
+        return view('students.index', ['students' => $this->students, 'genders' => $this->genders]);
     }
 
-    public function show($id) {
+    public function show($slug) {
         try {
-            $student = $this->searchStudentbyId($id);
+            $student = $this->searchStudentbySlug($slug);
         } catch (Exception $e) {
             abort('404');
         }
         return view('students.show', compact('student'));
+        
     }
 }

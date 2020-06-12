@@ -12,7 +12,7 @@
                     <li>Siamo certi del tuo successo, altrimenti ti rimborsiamo</li>
                 </ul>
             </div>
-            <div class="column">
+            <div class="column right">
                 <img src="https://www.boolean.careers/images/homepage/pc-black-gif.gif"" alt="">
             </div>
         </div>

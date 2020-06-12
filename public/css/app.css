@@ -138,6 +138,10 @@ li {
   padding-right: 4rem;
 }
 
+.jumbotron .column.right {
+  padding-left: 4rem;
+}
+
 .jumbotron .column img {
   width: 500px;
 }
