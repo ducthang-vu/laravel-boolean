@@ -5,6 +5,11 @@
         padding: 2rem;
     }
 
+    .input {
+        margin: 0 auto 2rem;
+        padding: 5px 10px;
+    }
+
     .card-container {
         @include flex($justify: space-between, $wrap: wrap);
         width: 100%;
