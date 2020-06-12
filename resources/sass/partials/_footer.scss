@@ -1,7 +1,50 @@
 .main-footer {
-    padding-top: 40px;
+    padding-top: 70px;
     color: #fff;
     background: #1b3c59;
-    font-size: 20px;
     line-height: 150%;
+
+    .footer__head {
+        @include flex();
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #fff;
+
+        .column {
+            flex-basis: 50%;
+
+            .info {
+                font-size: 15px;
+                line-height: 120%;
+            }
+
+            img {
+                width: 200px;
+            }
+
+            &.right {
+                text-align: right;
+                font-size: 20px;
+                line-height: 150%;
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .footer__bottom {
+        padding: 1.5rem 0 2rem;
+
+        .social-row {
+            a {
+                margin: 0 1.2rem 1.8rem;
+                font-size: 200%;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+        }
+    }
 }

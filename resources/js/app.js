@@ -17,12 +17,10 @@ $(document).ready(function() {
             data: {
                 filter: $(this).val() 
             }
-        }).done(function(res) {
+        }).done(res => {
             res.response.length ? 
                 $('.card-container').html(template({students: res.response})) : 
                 console.log(res.error)
-        }).fail(function(){
-            console.log('Api error')
-        })
+        }).fail(() => console.log('Api error'))
     })
 })

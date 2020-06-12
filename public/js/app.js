@@ -16112,7 +16112,7 @@ $(document).ready(function () {
         students: res.response
       })) : console.log(res.error);
     }).fail(function () {
-      console.log('Api error');
+      return console.log('Api error');
     });
   });
 });

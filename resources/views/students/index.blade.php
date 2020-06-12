@@ -9,7 +9,7 @@
             <select class="input block" name="filter" id="filter">
                 @foreach ($genders as $gender) 
                     <option value="{{ $gender }}">
-                        @if ($gender == 'm') Uomimini @elseif ($gender == 'f') Donne @else Tutti @endif
+                        @if ($gender == 'm') Uomini @elseif ($gender == 'f') Donne @else Tutti @endif
                     </option>    
                 @endforeach
             </select>
