@@ -16108,14 +16108,9 @@ $(document).ready(function () {
         filter: $(this).val()
       }
     }).done(function (res) {
-      if (res.response.length) {
-        $('.card-container').empty();
-        $('.card-container').html(template({
-          students: res.response
-        }));
-      } else {
-        console.log(res.error);
-      }
+      res.response.length ? $('.card-container').html(template({
+        students: res.response
+      })) : console.log(res.error);
     }).fail(function () {
       console.log('Api error');
     });
