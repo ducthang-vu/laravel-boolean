@@ -24,7 +24,7 @@
 
                 @foreach ($faq['after'] as $item)
                     @include('shared.faqTemplate', ['question' => $item['question'], 'answer' => $item['answer'] ])
-            @endforeach
+                @endforeach
             </section>
         </div>
     </div>
