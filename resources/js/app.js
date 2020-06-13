@@ -3,6 +3,7 @@ require('./bootstrap');
 
 
 $(document).ready(function() {
+    /* STUDENTS page */
     const apiUrl = window.location.protocol + '//' +  window.location.host + '/api/students/genders'
 
     // init handeblar
@@ -28,12 +29,22 @@ $(document).ready(function() {
     })
 
 
-    /* FAQ */
+    /* FAQ page*/
+    function resetButtonIcon(...$buttons) {
+        $buttons.forEach($item => $item.find('i').removeClass('fa-minus').addClass('fa-plus'))
+    }
+
     $('.faq-template__question').click(function() {
-        console.log('clicked')
-        $('.faq-template__answer').slideUp()
-        $(this).next().slideDown();
+        $(this).find('i').toggleClass('fa-plus fa-minus')
+        resetButtonIcon($(this).parent().siblings(),
+                        $(this).parents('.column').siblings())
+        let target = $(this).next()
+        target.slideToggle(400, 'linear')
+        $('.faq-template__answer').not(target).slideUp(400, 'linear')
     })
 
-    $('.faq-template__answer').click(function() {$(this).slideUp()})
+    $('.faq-template__answer').click(function() {
+        resetButtonIcon($(this).prev())
+        $(this).slideUp(400, 'linear')
+    })
 })

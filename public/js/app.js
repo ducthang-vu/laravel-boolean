@@ -16093,6 +16093,7 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 $(document).ready(function () {
+  /* STUDENTS page */
   var apiUrl = window.location.protocol + '//' + window.location.host + '/api/students/genders'; // init handeblar
 
   var source = $('#student-template').html();
@@ -16120,15 +16121,28 @@ $(document).ready(function () {
       return console.log('Api error');
     });
   });
-  /* FAQ */
+  /* FAQ page*/
+
+  function resetButtonIcon() {
+    for (var _len = arguments.length, $buttons = new Array(_len), _key = 0; _key < _len; _key++) {
+      $buttons[_key] = arguments[_key];
+    }
+
+    $buttons.forEach(function ($item) {
+      return $item.find('i').removeClass('fa-minus').addClass('fa-plus');
+    });
+  }
 
   $('.faq-template__question').click(function () {
-    console.log('clicked');
-    $('.faq-template__answer').slideUp();
-    $(this).next().slideDown();
+    $(this).find('i').toggleClass('fa-plus fa-minus');
+    resetButtonIcon($(this).parent().siblings(), $(this).parents('.column').siblings());
+    var target = $(this).next();
+    target.slideToggle(400, 'linear');
+    $('.faq-template__answer').not(target).slideUp(400, 'linear');
   });
   $('.faq-template__answer').click(function () {
-    $(this).slideUp();
+    resetButtonIcon($(this).prev());
+    $(this).slideUp(400, 'linear');
   });
 });
 
