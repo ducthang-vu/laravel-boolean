@@ -6244,7 +6244,7 @@ li {
   padding: 1rem;
   background: #fff;
   border-radius: 10px;
-  height: 223px;
+  min-height: 223px;
 }
 
 .card .card__header {
@@ -6316,5 +6316,34 @@ li {
   margin: 0 auto;
   width: 550px;
   background: #e8ebf1;
+}
+
+.privacy-main h2 {
+  margin-top: 1rem;
+  margin-bottom: 60px;
+  font-size: 2rem;
+}
+
+.privacy-main .privacy-main__section {
+  padding-bottom: 2rem;
+}
+
+.privacy-main .privacy-main__section h3 {
+  margin-bottom: 1rem;
+}
+
+.privacy-main .privacy-main__section p,
+.privacy-main .privacy-main__section ul {
+  margin-bottom: 2rem;
+  line-height: 150%;
+}
+
+.privacy-main .privacy-main__section ul li {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+.privacy-main .privacy-main__section ul li a {
+  color: #007bff;
 }
 

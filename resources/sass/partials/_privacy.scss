@@ -1,0 +1,31 @@
+.privacy-main {
+    h2 {
+        margin-top: 1rem;
+        margin-bottom: 60px;
+        font-size: 2rem;
+    }
+
+    .privacy-main__section {
+        padding-bottom: 2rem;
+
+        h3 {
+            margin-bottom: 1rem;
+        }
+
+        p, ul {
+            margin-bottom: 2rem;
+            line-height: 150%;
+        }
+
+        ul {
+            li {
+                list-style-type: disc;
+                margin-left: 2rem;
+
+                a {
+                    color: $azure;
+                }
+            }
+        }
+    }
+}

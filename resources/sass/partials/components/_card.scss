@@ -3,7 +3,7 @@
     padding: 1rem;
     background: #fff;
     border-radius: 10px;
-    height: 223px;
+    min-height: 223px;
 
     .card__header{
         @include flex();
