@@ -15,6 +15,6 @@ class StaticPagesController extends Controller
     }
 
     public function faq() {
-        return view('static-pages.faq');
+        return view('static-pages.faq', ['faq' => config('faq')]);
     }
 }

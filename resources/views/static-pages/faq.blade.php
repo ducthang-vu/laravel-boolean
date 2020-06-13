@@ -14,11 +14,17 @@
             <section class="column left">
                 <h3>Prima del corso</h3>
 
-                @include('shared.faqTemplate')
+                @foreach ($faq['before'] as $item)
+                    @include('shared.faqTemplate', ['question' => $item['question'], 'answer' => $item['answer'] ])
+                @endforeach
             </section>
 
             <section class="column right">
                 <h3>Dopo il corso</h3>
+
+                @foreach ($faq['after'] as $item)
+                    @include('shared.faqTemplate', ['question' => $item['question'], 'answer' => $item['answer'] ])
+            @endforeach
             </section>
         </div>
     </div>

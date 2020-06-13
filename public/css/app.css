@@ -6411,6 +6411,7 @@ li {
 }
 
 .faq-template__answer {
+  margin-bottom: 2rem;
   font-size: 18px;
   line-height: 30px;
 }
