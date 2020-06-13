@@ -10,7 +10,7 @@
         </section>
     </div>
     <div class="faq-main">
-        <div class="container">
+        <div id="faq-container" class="container">
             <section class="column left">
                 <h3>Prima del corso</h3>
 
@@ -28,4 +28,8 @@
             </section>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('js/app.js') }}"></script>
 @endsection

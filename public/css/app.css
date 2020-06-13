@@ -6391,6 +6391,7 @@ li {
 .faq-main .container .column h3 {
   margin-bottom: 30px;
   font-size: 32px;
+  font-weight: 500;
 }
 
 .faq-template__question {
@@ -6403,7 +6404,9 @@ li {
 }
 
 .faq-template__question .faq-template__question__text {
+  padding-right: 1rem;
   font-size: 24px;
+  font-weight: 500;
 }
 
 .faq-template__question .faq-template__question__btn {
@@ -6411,8 +6414,13 @@ li {
 }
 
 .faq-template__answer {
+  display: none;
   margin-bottom: 2rem;
   font-size: 18px;
   line-height: 30px;
+}
+
+.faq-template__answer a {
+  color: #007bff;
 }
 

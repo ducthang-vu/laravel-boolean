@@ -7,7 +7,10 @@ $(document).ready(function() {
 
     // init handeblar
     var source = $('#student-template').html()
-    var template = Handlebars.compile(source)
+    try {
+        var template = Handlebars.compile(source)
+    } catch {} //do nothing
+
     Handlebars.registerHelper('isMale', value => value == 'm')
 
     $('#filter').on('change', function() {
@@ -15,12 +18,22 @@ $(document).ready(function() {
             url: apiUrl,
             method: 'POST',
             data: {
-                filter: $(this).val() 
+                filter: $(this).val()
             }
         }).done(res => {
-            res.response.length ? 
-                $('.card-container').html(template({students: res.response})) : 
+            res.response.length ?
+                $('.card-container').html(template({students: res.response})) :
                 console.log(res.error)
         }).fail(() => console.log('Api error'))
     })
+
+
+    /* FAQ */
+    $('.faq-template__question').click(function() {
+        console.log('clicked')
+        $('.faq-template__answer').slideUp()
+        $(this).next().slideDown();
+    })
+
+    $('.faq-template__answer').click(function() {$(this).slideUp()})
 })

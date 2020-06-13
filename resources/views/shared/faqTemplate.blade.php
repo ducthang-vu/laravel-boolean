@@ -4,5 +4,5 @@
         <button class="faq-template__question__btn"><i class="fas fa-plus"></i></button>
     </div>
 
-    <p class="faq-template__answer">{{ $answer }}</p>
+    <p class="faq-template__answer">{!! $answer !!}</p>
 </div>

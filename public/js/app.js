@@ -16096,7 +16096,12 @@ $(document).ready(function () {
   var apiUrl = window.location.protocol + '//' + window.location.host + '/api/students/genders'; // init handeblar
 
   var source = $('#student-template').html();
-  var template = Handlebars.compile(source);
+
+  try {
+    var template = Handlebars.compile(source);
+  } catch (_unused) {} //do nothing
+
+
   Handlebars.registerHelper('isMale', function (value) {
     return value == 'm';
   });
@@ -16114,6 +16119,16 @@ $(document).ready(function () {
     }).fail(function () {
       return console.log('Api error');
     });
+  });
+  /* FAQ */
+
+  $('.faq-template__question').click(function () {
+    console.log('clicked');
+    $('.faq-template__answer').slideUp();
+    $(this).next().slideDown();
+  });
+  $('.faq-template__answer').click(function () {
+    $(this).slideUp();
   });
 });
 

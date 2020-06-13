@@ -29,7 +29,7 @@ return [
         ],
         [
             'question' => 'Quando costa il corso?',
-            'answer' => 'Trovi tutte le informazioni sul prezzo nell\'<a href="">apposita sezione della pagina corso</a>'
+            'answer' => 'Trovi tutte le informazioni sul prezzo nell\'<a href="">apposita sezione della pagina corso</a>.'
         ],
     ],
     'after' => [
