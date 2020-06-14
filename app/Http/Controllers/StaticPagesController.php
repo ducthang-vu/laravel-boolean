@@ -11,7 +11,7 @@ class StaticPagesController extends Controller
     }
 
     public function privacy() {
-        return view('static-pages.privacy');
+        return view('static-pages.privacy', ['sections' => config('privacy_text')]);
     }
 
     public function faq() {
